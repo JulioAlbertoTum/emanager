@@ -9,7 +9,13 @@
         <li class="collection-item"> Posicion: {{position}}</li>
       </ul>
       <router-link to="/" class="btn grey">Back</router-link>
-      <button @click="deleteEmployee" class="btn red">Delete</button>      
+      <button @click="deleteEmployee" class="btn red">Delete</button>
+      <div class="fixed-action-btn">
+          <router-link v-bind:to="{name: 'edit-employee', params: { employee_id: employee_id}}" 
+                       class="btn-floating btn-large red">      
+            <i class="fa fa-pencil"></i>
+          </router-link>
+      </div>      
   </div>
 </template>
 
